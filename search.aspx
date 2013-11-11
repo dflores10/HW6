@@ -3,22 +3,35 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <h2>Search for a Team:</h2>
+
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_TeamsWebSite %>" SelectCommand="SELECT * FROM [TeamInfo]"></asp:SqlDataSource>
 <br />
 
 <% If Not IsPostBack Then%>
-    Search for a team by name or head coach:&nbsp;&nbsp;&nbsp;
+    Enter a Team Name or Head Coach:&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="tbTeam" runat="server"></asp:TextBox>
     <br />
     <br />
 
 <%Else%>
-    Search for another team by name or head coach:&nbsp;&nbsp;&nbsp;
+   Enter another Team Name or Head Coach:&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="tbTeam2" runat="server"></asp:TextBox>
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" AllowSorting="True" 
-        AutoGenerateColumns="False" DataKeyNames="TeamId" DataSourceID="SqlDataSource1" Width="749px">
+    <asp:GridView 
+        ID="GridView1" 
+        runat="server" 
+        AllowSorting="True" 
+        AutoGenerateColumns="False" 
+        DataKeyNames="TeamId" 
+        DataSourceID="SqlDataSource1" 
+        Width="874px"
+        Gridlines="None"
+        CssClass="cssgridview2"
+        AlternatingRowStyle-CssClass="alt"
+        PagerStyle-CssClass="pgr">
+
         <Columns>
             <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" />
             <asp:BoundField DataField="HeadCoach" HeaderText="Head Coach" SortExpression="HeadCoach" />

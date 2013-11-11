@@ -3,15 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <br />
-    <h2> Welcome to the NBA Teams Website! </h2>
+
+    <h2> About the NBA Teams Website: </h2>
+
     <p> This website includes information about all 30 NBA teams. Specifically, we keep track of every team's 
         name, head coach, conference, division, number of wins, number of losses and win-loss percentage 
         for the 2013-2014 season. Our main goal is to keep users up to date with the current standings 
         of each team throughout the season.
     </p>
     <br />
-    <img src="images/teamlogos.jpg" alt="Team Logos" title="Map of Team Logos" />
+    <asp:Image class="teamlogos_img" ID="Image1" runat="server" ImageUrl="~/images/teamlogos.jpg" />
     <br />
     <br />
 </asp:Content>

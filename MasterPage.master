@@ -17,20 +17,34 @@
     <div id="container">
         <div id="header">
 
+            <asp:Image class="nbalogo_img" ID="nbalogo" runat="server" ImageUrl="~/images/nbalogo.jpg" Width="100px" />
+
             <h1>NBA Teams</h1>
+
+            
+            <div id ="datestamp">
+
+                <asp:Label ID="lblDate" runat="server"></asp:Label>
+
+            </div>
 
          </div>
 
         <div id="menu">
 
             <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="horizontal">
-                </asp:Menu>
+                <LevelMenuItemStyles>
+                    <asp:MenuItemStyle CssClass="level1" />
+                </LevelMenuItemStyles>
+
+            </asp:Menu>
 
             <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" showstartingnode="false"/>
 
         </div>
 
-        <div id="main">
+        <div id="content">
+
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
@@ -39,7 +53,7 @@
 
         <div id="footer">
 
-            All Contents &copy; Desirae Flores
+            Copyright &copy; 2013 Desirae Flores - 6K183
 
         </div>
        

@@ -31,7 +31,18 @@
         </UpdateParameters>
     </asp:SqlDataSource>
     <br />
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="TeamId" DataSourceID="SqlDataSource1" Height="50px" Width="300px">
+    <asp:DetailsView 
+        ID="DetailsView1" 
+        runat="server" 
+        AutoGenerateRows="False" 
+        DataKeyNames="TeamId" 
+        DataSourceID="SqlDataSource1" 
+        Height="50px"
+        Width="300px"
+        HeaderText="Team Details"
+        CssClass="cssdetailsview"
+        HeaderStyle-CssClass="header"
+        FieldHeaderStyle-CssClass="fieldheader">
         <Fields>
             <asp:BoundField DataField="TeamName" HeaderText="Team Name" SortExpression="TeamName" />
             <asp:BoundField DataField="HeadCoach" HeaderText="Head Coach" SortExpression="HeadCoach" />
